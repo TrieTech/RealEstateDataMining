@@ -1,0 +1,3 @@
+Real Property Data Search: http://sdat.dat.maryland.gov/realproperty/pages/default.aspx
+Mortgage Data Search for Maryland: https://mdlandrec.net/main/
+Proprietary Real Estate Data-Mining Tool Example: http://www.tlo.com/

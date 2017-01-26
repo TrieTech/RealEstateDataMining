@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#loadCustomerData" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+  <tabs>
+    <Tab text="Information">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="500.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Auction Access:" />
+                  <TextField fx:id="txtAuctionID" layoutX="108.0" layoutY="10.0" prefHeight="25.0" prefWidth="113.0" />
+                  <Button fx:id="btnSetupAuction" layoutX="221.0" layoutY="10.0" mnemonicParsing="false" text="Setup" />
+                  <Label layoutX="14.0" layoutY="78.0" text="First Name:" />
+                  <TextField fx:id="txtFirstName" editable="false" layoutX="108.0" layoutY="74.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Last Name:" />
+                  <TextField fx:id="txtLastName" editable="false" layoutX="108.0" layoutY="106.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Label layoutX="14.0" layoutY="143.0" text="Time Zone:" />
+                  <ComboBox fx:id="cboTimeZone" layoutX="108.0" layoutY="139.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Label layoutX="14.0" layoutY="193.0" text="Email:" />
+                  <TextField fx:id="txtEmail" editable="false" layoutX="108.0" layoutY="189.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Label layoutX="15.0" layoutY="256.0" text="Text/Email:" />
+                  <TextField fx:id="txtMsgClient" layoutX="109.0" layoutY="252.0" prefHeight="25.0" prefWidth="113.0" />
+                  <Button fx:id="btnSetupClient" layoutX="222.0" layoutY="252.0" mnemonicParsing="false" text="Setup" />
+                  <Label layoutX="15.0" layoutY="225.0" text="Format:" />
+                  <ComboBox fx:id="cboFormat" layoutX="109.0" layoutY="221.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Label layoutX="300.0" layoutY="14.0" text="Street Address:" />
+                  <Label layoutX="300.0" layoutY="47.0" text="City:" />
+                  <Label layoutX="300.0" layoutY="79.0" text="State:" />
+                  <Label layoutX="300.0" layoutY="112.0" text="Country:" />
+                  <Label layoutX="300.0" layoutY="162.0" text="Home Phone:" />
+                  <Label layoutX="300.0" layoutY="194.0" text="Mobile Phone:" />
+                  <Label layoutX="300.0" layoutY="225.0" text="Work Phone:" />
+                  <Label layoutX="300.0" layoutY="256.0" text="Fax Number:" />
+                  <TextField fx:id="txtStreetAddress" editable="false" layoutX="390.0" layoutY="10.0" prefHeight="25.0" prefWidth="161.0" />
+                  <TextField fx:id="txtCity" editable="false" layoutX="390.0" layoutY="43.0" prefHeight="25.0" prefWidth="161.0" />
+                  <ComboBox fx:id="cboState" layoutX="390.0" layoutY="75.0" prefHeight="25.0" prefWidth="161.0" />
+                  <ComboBox fx:id="cboCountry" layoutX="390.0" layoutY="108.0" prefHeight="25.0" prefWidth="161.0" />
+                  <TextField fx:id="txtHomePhone" editable="false" layoutX="390.0" layoutY="158.0" prefHeight="25.0" prefWidth="161.0" />
+                  <TextField fx:id="txtMobilePhone" editable="false" layoutX="390.0" layoutY="190.0" prefHeight="25.0" prefWidth="161.0" />
+                  <TextField fx:id="txtWorkPhone" editable="false" layoutX="390.0" layoutY="221.0" prefHeight="25.0" prefWidth="161.0" />
+                  <TextField fx:id="txtFaxNumber" editable="false" layoutX="390.0" layoutY="252.0" prefHeight="25.0" prefWidth="161.0" />
+                  <Button fx:id="btnUpdate" layoutX="427.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateChanges" prefHeight="25.0" prefWidth="124.0" text="Update Changes" />
+                  <Hyperlink fx:id="hlkChangePassword" layoutX="449.0" layoutY="338.0" text="Change Password" />
+                  <Button fx:id="btnLogOut" layoutX="15.0" layoutY="327.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="25.0" prefWidth="124.0" text="Log Out" />
+                  <Label layoutX="14.0" layoutY="47.0" text="Username:" />
+                  <TextField fx:id="txtUsername" editable="false" layoutX="108.0" layoutY="43.0" prefHeight="25.0" prefWidth="161.0" />
+                  <CheckBox fx:id="cbxEditFields" layoutX="427.0" layoutY="287.0" mnemonicParsing="false" onAction="#editPreloadedFields" text="Edit Preloaded Fields" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="For Sale">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="390.0" layoutY="34.0" text="Property ID:" />
+                  <Label layoutX="390.0" layoutY="58.0" text="Deed ID:" />
+                  <Label layoutX="392.0" layoutY="82.0" text="Auction ID:" />
+                  <Button fx:id="btnClear" layoutX="482.0" layoutY="332.0" mnemonicParsing="false" text="Clear" />
+                  <Button fx:id="btnSearch" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" text="Search" />
+                  <Label layoutX="14.0" layoutY="34.0" text="States:" />
+                  <Label layoutX="14.0" layoutY="58.0" text="Markets:" />
+                  <Label layoutX="14.0" layoutY="85.0" text="County:" />
+                  <Label layoutX="17.0" layoutY="109.0" text="City:" />
+                  <Label layoutX="17.0" layoutY="134.0" text="ZIP Code:" />
+                  <Label layoutX="17.0" layoutY="159.0" text="Street Address/Intersection:" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="For Lease">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Dealerships">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Contact Preferences">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
