@@ -21,7 +21,7 @@ public class SignUpController implements Initializable, ControlledScreen{
 	 * Create a new instance of a customer and load it into the customer table of a database
 	 * */
 	public SignUpController() {
-		System.out.println("An instance of the SignUpController has been created");	
+		System.out.println("SignUpController loaded");	
 		customer = new Customer();
 	}
 

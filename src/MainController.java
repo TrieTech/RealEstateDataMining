@@ -68,7 +68,7 @@ public class MainController implements Initializable, ControlledScreen{
 	private ComboBox<String> cboCountry;
 	
 	public MainController(){
-		System.out.println("An instance of the MainController has been created.");		
+		System.out.println("MainController loaded.");		
 	}
 	
 	@Override

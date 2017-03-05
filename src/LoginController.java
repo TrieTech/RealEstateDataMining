@@ -56,7 +56,7 @@ public class LoginController implements Initializable, ControlledScreen{
 	private Customer customer;
 	
 	public LoginController() {
-		System.out.println("An instance of the LoginController has been created.");		
+		System.out.println("LoginController loaded.");		
 		customer = new Customer();
 	}
 
@@ -149,10 +149,14 @@ public class LoginController implements Initializable, ControlledScreen{
 	 * @param node the widget that the shake animation is to be applied to
 	 * */
 	private void shake(Node node){
-		TranslateTransition transition = new TranslateTransition(Duration.millis(50), node); //50
+		long transRate = 50; //50
+		float transOffset = 10f; //10f
+		int cycleCount = 6; //6
 		
-		transition.setByX(10f);
-		transition.setCycleCount(6); //2
+		TranslateTransition transition = new TranslateTransition(Duration.millis(transRate), node); 
+		
+		transition.setByX(transOffset);
+		transition.setCycleCount(cycleCount); 
 		transition.setAutoReverse(true);
 		transition.playFromStart();
 	}
